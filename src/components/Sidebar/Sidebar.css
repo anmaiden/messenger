@@ -1,0 +1,85 @@
+:root{
+  --main-blue-bg: #2680D9;
+  --main-blue-hover: #1A69B8;
+  --arrow-icon-background: #58AAFC;
+  --white: #FFFFFF;
+}
+
+.Sidebar{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  color: var(--white);
+  background-color: var(--main-blue-bg);
+}
+
+.Sidebar-User-header{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  top: 36px;
+  padding: 40px 0 0 0;
+}
+.Sidebar-User{
+  padding-top: 15px;
+}
+.Sidebar-User-Status {
+  gap: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.Sidebar-User-Status-Icon {
+  color: #01BF93;
+  font-size: 10px;
+}
+/* граница вокруг аватарки */
+.Sidebar-Avatar {
+  align-self: center;
+  border: 3px solid var(--white);
+}
+
+/* отступы для раздела меню */
+.Sidebar-Menu-header{
+  top: 36px;
+}
+
+/* цвет всех иконок */
+.Sidebar-Menu-header,
+.Sidebar-Icon{
+  color: var(--white);
+}
+
+/*  отступ для иконок для свернутого состояния, чтобы скрыть текст */
+.Sidebar-Menu_Item-Icon{
+  margin: 0px 10px;
+}
+
+/* кнопка открыть/закрыть боковую панель */
+.Sidebar-Toggle_Button{
+  align-items: center;
+  align-self: flex-end;
+  width: 65%;
+  height: 30px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  color: var(--main-blue-bg);
+  background-color: var(--arrow-icon-background);
+}
+
+.Sidebar-Toggle_Button:hover{
+  cursor: pointer;
+  color: var(--main-blue-hover);
+}
+
+/* иконка на кнопке открытия/закрытия */
+.Sidebar-Arrow_Icon{
+  color: var(--white);
+  text-align: center;
+}
