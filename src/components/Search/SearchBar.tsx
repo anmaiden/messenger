@@ -1,5 +1,15 @@
 import React from "react";
+import { cn } from "@bem-react/classname";
+import "./SearchBar.css";
 
-export default function SearchBar() {
-  return <div>SearchBar</div>;
-}
+const SearchBar: React.FC = ({}) => {
+  const SearchBar = cn("SearchBar");
+
+  return (
+    <div className={SearchBar()}>
+      <input className={SearchBar("Input")} type="text" placeholder="Поиск" />
+    </div>
+  );
+};
+
+export default SearchBar;

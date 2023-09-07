@@ -28,7 +28,7 @@ import {
 } from "@material-ui/core";
 
 // импорт фотографии пользователя
-import userAvatars from "../Chat/userAvatars";
+import userAvatars from "../../data/userAvatars";
 
 const Sidebar: React.FC = () => {
   //логика открытия и закрытия боковой панели

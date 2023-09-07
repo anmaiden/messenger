@@ -1,0 +1,28 @@
+.ChatList{
+  width: 345px;
+  height: 100vh;
+}
+
+.ChatList-Badge{
+  background-color: #71CD50;
+  color: white;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ChatList-Item{
+  width: 100%;
+  height: 80px;
+  padding: 11px 14px;
+}
+
+ .ChatList-Chat-User {
+  width: 253px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

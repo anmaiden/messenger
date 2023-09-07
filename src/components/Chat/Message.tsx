@@ -1,5 +1,14 @@
 import React from "react";
+import { User } from "../../data/users";
 
-export default function Message() {
-  return <div>Message</div>;
+interface MessageProps {
+  message: string;
+  sender: User;
+  time: string;
 }
+
+const Message = ({ message }: MessageProps) => (
+  <div className="message">{message}</div>
+);
+
+export default Message;
