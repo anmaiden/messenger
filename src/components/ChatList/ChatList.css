@@ -19,10 +19,19 @@
   height: 80px;
   padding: 11px 14px;
 }
-
+.ChatList-Chat-Wrapper{
+  display: flex;
+}
  .ChatList-Chat-User {
-  width: 253px;
+  width: 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
+ .ChatList-Chat-Time {
+   width: 253px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }

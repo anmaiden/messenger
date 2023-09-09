@@ -12,6 +12,7 @@ import {
   ListItemAvatar,
   ListItemText,
 } from "@material-ui/core";
+import UserChat from "./UserName";
 
 const ChatListItem: React.FC = () => {
   // функция вывода последнего сообщения пользователя
@@ -60,11 +61,15 @@ const ChatListItem: React.FC = () => {
             </Box>
           </ListItemAvatar>
           <Box className={ChatList("Text")}>
-            <ListItemText
-              className={ChatList("Chat-User")}
-              primary={user.name}
-              secondary={getLastMessage(user)?.time}
-            />
+            <Box className={ChatList("Chat-Wrapper")}>
+              <ListItemText className={ChatList("Chat-User")}>
+                <UserChat name={user.name} />
+              </ListItemText>
+              <ListItemText
+                className={ChatList("Chat-Time")}
+                secondary={getLastMessage(user)?.time}
+              />
+            </Box>
             <ListItemText secondary={getLastMessage(user)?.text} />
           </Box>
         </ListItem>
