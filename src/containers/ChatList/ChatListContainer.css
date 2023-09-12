@@ -1,7 +1,0 @@
-.ChatListContainer{
-  display: flex;
-}
-.ChatContainer-ChatList {
-  height: 100%;
-  width: calc(100% - 247px);
-}

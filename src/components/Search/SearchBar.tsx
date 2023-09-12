@@ -2,7 +2,7 @@ import React from "react";
 import { cn } from "@bem-react/classname";
 import "./SearchBar.css";
 
-const SearchBar: React.FC = ({}) => {
+const SearchBar: React.FC = () => {
   const SearchBar = cn("SearchBar");
 
   return (

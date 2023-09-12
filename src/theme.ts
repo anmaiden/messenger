@@ -27,6 +27,7 @@ export const theme = createTheme({
       fontSize: '14px',
       fontWeight: 400,
       letterSpacing: '0.4px',
+      lineHeight: "20px",
     },
   },
 });

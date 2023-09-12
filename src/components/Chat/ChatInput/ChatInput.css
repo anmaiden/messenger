@@ -1,0 +1,22 @@
+.ChatInput{
+  background: #FFF;
+  box-shadow: 0px 0px 4px 0px rgba(97, 97, 97, 0.20), 0px 0px 2px 0px rgba(97, 97, 97, 0.20);
+  display: flex;
+  height: 54px;
+  padding: 12px 17px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.ChatInput-MsgInput {
+  border-style: none;
+  border-radius: 15px;
+  background: #E7ECF1;
+  display: flex;
+  width: 573px;
+  height: 30px;
+  padding: 5px 397px 5px 16px;
+  align-items: center;
+  flex-shrink: 0;
+}

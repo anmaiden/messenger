@@ -1,0 +1,6 @@
+.AppContainer{
+  display: flex;
+}
+.AppContainer-ChatList {
+  height: 100%;
+}

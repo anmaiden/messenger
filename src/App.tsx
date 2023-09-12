@@ -6,7 +6,8 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import { theme } from "./theme";
 //components
 import Sidebar from "./components/Sidebar/Sidebar";
-import ChatListContainer from "./containers/ChatList/ChatListContainer";
+import Chat from "./components/Chat/ChatBody/Chat";
+import AppContainer from "./containers/App/AppContainer";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
         <Router>
           <Sidebar />
           <Routes>
-            <Route path="/" element={<ChatListContainer />} />
+            <Route path="/" element={<AppContainer />} />
+            <Route path="/chats/:id" element={<Chat />} />
           </Routes>
         </Router>
       </div>

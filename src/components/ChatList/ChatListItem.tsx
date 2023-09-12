@@ -1,6 +1,7 @@
 import React from "react";
-import { ChatMessage } from "../Chat/MessageList";
-import { messages } from "../Chat/MessageList";
+import { Link } from "react-router-dom";
+import { ChatMessage } from "../Chat/ChatBody/Messages/MessageList";
+import { messages } from "../Chat/ChatBody/Messages/MessageList";
 import { users, User } from "../../data/users";
 import "./ChatList.css";
 import { cn } from "@bem-react/classname";
@@ -12,7 +13,7 @@ import {
   ListItemAvatar,
   ListItemText,
 } from "@material-ui/core";
-import UserChat from "./UserName";
+import UserName from "../Chat/ChatHeader/UserName";
 
 const ChatListItem: React.FC = () => {
   // функция вывода последнего сообщения пользователя
@@ -63,7 +64,7 @@ const ChatListItem: React.FC = () => {
           <Box className={ChatList("Text")}>
             <Box className={ChatList("Chat-Wrapper")}>
               <ListItemText className={ChatList("Chat-User")}>
-                <UserChat name={user.name} />
+                <UserName user={user} />
               </ListItemText>
               <ListItemText
                 className={ChatList("Chat-Time")}
