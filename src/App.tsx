@@ -7,7 +7,7 @@ import { theme } from "./theme";
 //components
 import Sidebar from "./components/Sidebar/Sidebar";
 import Chat from "./components/Chat/ChatBody/Chat";
-import AppContainer from "./containers/App/AppContainer";
+import ChatList from "./components/ChatList/ChatList";
 
 function App() {
   return (
@@ -15,8 +15,8 @@ function App() {
       <div className="App">
         <Router>
           <Sidebar />
+          <ChatList />
           <Routes>
-            <Route path="/" element={<AppContainer />} />
             <Route path="/chats/:id" element={<Chat />} />
           </Routes>
         </Router>

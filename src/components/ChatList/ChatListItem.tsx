@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ChatMessage } from "../Chat/ChatBody/Messages/MessageList";
 import { messages } from "../Chat/ChatBody/Messages/MessageList";
@@ -19,9 +19,11 @@ interface ChatListItemProps {
   user: User;
 }
 
-const ChatListItem: React.FC<ChatListItemProps> = ({ user }) => {
+const ChatListItem: React.FC<ChatListItemProps> = ({
+  user
+}) => {
   
-  
+
   // функция вывода последнего сообщения пользователя
   const getLastMessage = (user: User): ChatMessage => {
     // фильтруем сообщения только этого пользователя
@@ -45,8 +47,11 @@ const ChatListItem: React.FC<ChatListItemProps> = ({ user }) => {
   const ChatList = cn("ChatList");
 
   return (
-    <Box>
-      <ListItem key={user.id} className={ChatList("Item")}>
+    <Link to={`/chats/${user.id}`} className={ChatList("Link")}>
+      <ListItem
+        key={user.id}
+        className={ChatList("Item")}
+      >
         <ListItemAvatar>
           <Box>
             {user.isOnline ? (
@@ -79,7 +84,7 @@ const ChatListItem: React.FC<ChatListItemProps> = ({ user }) => {
           <ListItemText secondary={getLastMessage(user)?.text} />
         </Box>
       </ListItem>
-    </Box>
+    </Link>
   );
 };
 

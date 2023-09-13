@@ -1,6 +1,16 @@
 .ChatList{
   width: 345px;
 }
+/* стили для выбранного чата в списке */
+.ChatList-Link {
+  text-decoration: none;
+}
+.ChatList-Item_selected{
+  text-decoration: none;
+  background: #4290DE;
+  color: #fff;
+}
+/*  */
 .ChatList-List{
   overflow-x: hidden;
 }
