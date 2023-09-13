@@ -15,7 +15,13 @@ import {
 } from "@material-ui/core";
 import UserName from "../Chat/ChatHeader/UserName";
 
-const ChatListItem: React.FC = () => {
+interface ChatListItemProps {
+  user: User;
+}
+
+const ChatListItem: React.FC<ChatListItemProps> = ({ user }) => {
+  
+  
   // функция вывода последнего сообщения пользователя
   const getLastMessage = (user: User): ChatMessage => {
     // фильтруем сообщения только этого пользователя
@@ -40,41 +46,39 @@ const ChatListItem: React.FC = () => {
 
   return (
     <Box>
-      {users.map((user) => (
-        <ListItem key={user.id} className={ChatList("Item")}>
-          <ListItemAvatar>
-            <Box>
-              {user.isOnline ? (
-                <Badge
-                  overlap="circular"
-                  badgeContent={<div className={ChatList("Badge")}></div>}
-                  anchorOrigin={{
-                    vertical: "bottom",
-                    horizontal: "right",
-                  }}
-                >
-                  <Avatar alt={user.name} src={user.avatar} />
-                </Badge>
-              ) : (
+      <ListItem key={user.id} className={ChatList("Item")}>
+        <ListItemAvatar>
+          <Box>
+            {user.isOnline ? (
+              <Badge
+                overlap="circular"
+                badgeContent={<div className={ChatList("Badge")}></div>}
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "right",
+                }}
+              >
                 <Avatar alt={user.name} src={user.avatar} />
-              )}
-              {user.isOnline && <div className="online-dot" />}
-            </Box>
-          </ListItemAvatar>
-          <Box className={ChatList("Text")}>
-            <Box className={ChatList("Chat-Wrapper")}>
-              <ListItemText className={ChatList("Chat-User")}>
-                <UserName user={user} />
-              </ListItemText>
-              <ListItemText
-                className={ChatList("Chat-Time")}
-                secondary={getLastMessage(user)?.time}
-              />
-            </Box>
-            <ListItemText secondary={getLastMessage(user)?.text} />
+              </Badge>
+            ) : (
+              <Avatar alt={user.name} src={user.avatar} />
+            )}
+            {user.isOnline && <div className="online-dot" />}
           </Box>
-        </ListItem>
-      ))}
+        </ListItemAvatar>
+        <Box className={ChatList("Text")}>
+          <Box className={ChatList("Chat-Wrapper")}>
+            <ListItemText className={ChatList("Chat-User")}>
+              <UserName user={user} />
+            </ListItemText>
+            <ListItemText
+              className={ChatList("Chat-Time")}
+              secondary={getLastMessage(user)?.time}
+            />
+          </Box>
+          <ListItemText secondary={getLastMessage(user)?.text} />
+        </Box>
+      </ListItem>
     </Box>
   );
 };

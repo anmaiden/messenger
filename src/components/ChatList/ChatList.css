@@ -1,6 +1,8 @@
 .ChatList{
   width: 345px;
-  height: 100%;
+}
+.ChatList-List{
+  overflow-x: hidden;
 }
 
 .ChatList-Badge{
