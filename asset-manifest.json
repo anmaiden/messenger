@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/anmaiden/messenger/static/css/main.e1af5418.css",
+    "main.js": "/anmaiden/messenger/static/js/main.1f3c565e.js",
+    "static/media/userAvatar1.png": "/anmaiden/messenger/static/media/userAvatar1.b8c82e558383f74cfd5f.png",
+    "index.html": "/anmaiden/messenger/index.html",
+    "main.e1af5418.css.map": "/anmaiden/messenger/static/css/main.e1af5418.css.map",
+    "main.1f3c565e.js.map": "/anmaiden/messenger/static/js/main.1f3c565e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e1af5418.css",
+    "static/js/main.1f3c565e.js"
+  ]
+}
