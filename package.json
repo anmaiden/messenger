@@ -1,7 +1,7 @@
 {
   "name": "messenger",
   "version": "0.1.0",
-  "homepage": "https://github.com/anmaiden/ktech-messenger.git",
+  "homepage": "https://github.com/anmaiden/messenger",
   "private": true,
   "dependencies": {
     "@babel/core": "^7.22.11",
