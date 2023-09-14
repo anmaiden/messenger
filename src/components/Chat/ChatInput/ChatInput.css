@@ -1,5 +1,5 @@
 .ChatInput{
-  margin-top: 90px;
+  margin-top: 190px;
   background: #FFF;
   box-shadow: 0px 0px 4px 0px rgba(97, 97, 97, 0.20), 0px 0px 2px 0px rgba(97, 97, 97, 0.20);
   display: flex;
@@ -15,9 +15,10 @@
   border-radius: 15px;
   background: #E7ECF1;
   display: flex;
-  width: 573px;
+  width: 90%;
   height: 30px;
-  padding: 5px 397px 5px 16px;
+  padding: 5px 20px 5px 16px;
   align-items: center;
   flex-shrink: 0;
 }
+

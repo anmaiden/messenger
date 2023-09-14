@@ -1,11 +1,7 @@
-.ChatList{
-  width: 345px;
-}
-/* стили для выбранного чата в списке */
 .ChatList-Link {
-  width: 345px;
+  width: 355px;
   text-decoration: none;
-  color: #114475;;
+  color: #114475;
 }
 .ChatList-Avatar {
   display: flex;
@@ -14,9 +10,6 @@
 .ChatList-MsgsContainer{
  display: flex;
 }
-/* .ChatList-MsgsBadge{
-  
-} */
 .ChatList-Text{
   display: flex;
   flex-direction: column;

@@ -19,10 +19,9 @@ const ChatListItem: React.FC<User> = observer(
   ({ id, name, isOnline, avatar, isTyping, text, UnreadMessages }) => {
     //class for block
     const ChatList = cn("ChatList");
-
     return (
       <Link to={`/chats/${id}`} state={{ id }} className={ChatList("Link")}>
-        <ListItem key={id}>
+        <ListItem key={id} className={ChatList("Item")}>
           <ListItemAvatar>
             <Box className={ChatList("Avatar")}>
               <Avatar alt={name} src={avatar} />

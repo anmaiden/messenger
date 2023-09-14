@@ -11,7 +11,7 @@ import UserStore from "../../stores/UserStore";
 import { actionDelay, randomNumbers } from "../../fuctions/randomNumbers";
 
 export const ChatList: React.FC = observer(() => {
-  const classes = cn("ChatList");
+  const chatList = cn("ChatList");
   const [searchQuery, setSearchQuery] = useState("");
   const filteredUsers = UserStore.userData.filter((user) =>
     user.name.toLowerCase().includes(searchQuery.toLowerCase())
@@ -48,10 +48,10 @@ export const ChatList: React.FC = observer(() => {
   }, []);
 
   return (
-    <Box className={classes()}>
+    <Box className={chatList()}>
       <SearchBar setSearchQuery={setSearchQuery} />
       <Box>
-        <List className={classes("List")}>
+        <List className={chatList("List")}>
           {filteredUsers.map(
             ({
               id,

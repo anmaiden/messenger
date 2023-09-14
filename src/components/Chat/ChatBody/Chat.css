@@ -8,6 +8,7 @@
   width: 100%;
 }
 .Chat-ChatHeader {
+  height: 70px;
   color: #114475;
   font-size: 14px;
   font-style: normal;
@@ -16,7 +17,7 @@
   letter-spacing: 0.4px;
   display: flex;
   flex-direction: column;
-  padding: 25px 210px 13px 211px;
+  padding: 0px 20px 0px 20px;
   justify-content: center;
   align-items: center;
   background: #FFF;
