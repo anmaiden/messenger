@@ -1,0 +1,62 @@
+.TypingStatus{
+  width: 64px;
+  height: 20px;
+  margin-left: 8px;
+  color: #2580DB;
+  display: flex;
+  align-items: center;
+}
+
+.TypingStatus-Container {
+  height: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.TypingStatus-Status{
+  margin-left: 2px;
+}
+.TypingStatus-Circle{
+  margin-right: 4px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color:#2580DB;
+  animation: typing 4s  infinite;
+}
+
+.TypingStatus-Circle::nth-child(1) {
+  animation-delay: 500ms;
+}
+.TypingStatus-Circle::nth-child(2) {
+  animation-delay: 300ms;
+}
+.TypingStatus-Circle::nth-child(3) {
+  animation-delay: 200ms;
+}
+
+@keyframes typing {
+  0% {
+      transform: scale(0.5);
+    }
+  
+    20% {
+      transform: scale(0.75);
+    }
+  
+    40% {
+      transform: scale(1.25);
+    }
+  
+    60% {
+      transform: scale(1.5);
+    }
+  
+    80% {
+      transform: scale(1.25);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+}

@@ -25,12 +25,15 @@ import {
   ListItemText,
   Box,
   SvgIcon,
+  Badge,
 } from "@material-ui/core";
 
 // импорт фотографии пользователя
 import userAvatars from "../../data/userAvatars";
+import UserStore from "../../stores/UserStore";
+import { observer } from "mobx-react-lite";
 
-const Sidebar: React.FC = () => {
+const Sidebar: React.FC = observer(() => {
   //логика открытия и закрытия боковой панели
   const [open, setOpen] = useState(false);
   const handleMenuToggle = () => {
@@ -39,7 +42,7 @@ const Sidebar: React.FC = () => {
 
   //class for block
   const sidebar = cn("Sidebar");
-
+  const totalUnreadMessages = UserStore.totalMessages;
   return (
     <Box sx={{ display: "flex" }}>
       <DrawerMui variant="permanent" anchor="left" open={open}>
@@ -71,7 +74,9 @@ const Sidebar: React.FC = () => {
             <MenuList className={sidebar("Menu-header")}>
               <MenuItem className={sidebar("Menu_Item")} selected>
                 <ListItemIcon className={sidebar("Menu_Item-Icon")}>
-                  <SvgIcon component={DialogsIcon} viewBox="0 0 24 24" />
+                  <Badge badgeContent={totalUnreadMessages} color="error">
+                    <SvgIcon component={DialogsIcon} viewBox="0 0 24 24" />
+                  </Badge>
                 </ListItemIcon>
                 <ListItemText>ДИАЛОГИ</ListItemText>
               </MenuItem>
@@ -95,6 +100,6 @@ const Sidebar: React.FC = () => {
       </DrawerMui>
     </Box>
   );
-};
+});
 
 export default Sidebar;

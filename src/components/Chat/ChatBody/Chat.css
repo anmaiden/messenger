@@ -7,3 +7,18 @@
   justify-content: space-between;
   width: 100%;
 }
+.Chat-ChatHeader {
+  color: #114475;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 210px 13px 211px;
+  justify-content: center;
+  align-items: center;
+  background: #FFF;
+  box-shadow: 1px 0px 4px 0px rgba(97, 97, 97, 0.20), 1px 0px 2px 0px rgba(97, 97, 97, 0.20);
+}

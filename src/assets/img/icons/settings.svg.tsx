@@ -7,7 +7,7 @@ export const SettingsIcon = () => {
       viewBox="0 0 24 24"
       fill="none"
     >
-      <g clip-path="url(#clip0_115_29)">
+      <g clipPath="url(#clip0_115_29)">
         <mask
           id="mask0_115_29"
           maskUnits="userSpaceOnUse"
