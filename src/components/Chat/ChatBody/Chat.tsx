@@ -9,11 +9,12 @@ import TypingStatus from "../../Typing/TypingStatus";
 import { observer } from "mobx-react-lite";
 import UserStore from "../../../stores/UserStore";
 
+const cnChat = cn("Chat");
+
 const Chat: React.FC = observer(() => {
   const { id } = useLocation().state;
 
-  //class for block
-  const Chat = cn("Chat");
+
   const { name, isTyping } = UserStore.userData[id];
 
   useEffect(() => {
@@ -21,8 +22,8 @@ const Chat: React.FC = observer(() => {
   }, [id]);
 
   return (
-    <Box className={Chat()}>
-      <Box className={Chat("ChatHeader")}>
+    <Box className={cnChat()}>
+      <Box className={cnChat("ChatHeader")}>
         <Typography>{name}</Typography>
         {isTyping && <TypingStatus />}
       </Box>

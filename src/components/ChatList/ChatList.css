@@ -3,6 +3,9 @@
   text-decoration: none;
   color: #114475;
 }
+.ChatList-Link__active{
+    background: #1A69B8;
+}
 .ChatList-Avatar {
   display: flex;
   align-items: center;
